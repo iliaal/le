@@ -1426,8 +1426,7 @@ class Transport(object):
                 try:
                     s = wrap_socket(
                         plain_socket, ca_certs=self._certs,
-                        cert_reqs=ssl.CERT_REQUIRED, ssl_version=ssl.PROTOCOL_TLSv1,
-                        ciphers="HIGH:-aNULL:-eNULL:-PSK:RC4-SHA:RC4-MD5")
+                        cert_reqs=ssl.CERT_REQUIRED)
                 except TypeError:
                     s = wrap_socket(
                         plain_socket, ca_certs=self._certs, cert_reqs=ssl.CERT_REQUIRED,
